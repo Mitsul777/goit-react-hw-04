@@ -1,0 +1,50 @@
+.searchContainer {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px;
+    background-color: blue; /* Цвет фона, при необходимости измените на ваш выбор */
+}
+
+.searchInput {
+    width: 300px; /* Ширина поля ввода минус ширина кнопки поиска */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.searchButton {
+    padding: 10px;
+    background-color: transparent; /* Прозрачный фон */
+    border: none;
+    cursor: pointer;
+}
+
+.searchIcon {
+    color: white; /* Цвет иконки лупы */
+    font-size: 20px;
+}
+
+.error {
+    color: red; /* Цвет текста ошибки */
+    font-size: 14px;
+    margin-top: 5px; /* Отступ сверху для текста ошибки */
+}
+
+.searchInputContainer {
+    position: relative;
+    display: flex; /* Добавляем контейнеру flex-выравнивание */
+    justify-content: center;
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+}
+
+.searchInputContainer > .searchButton {
+    order: -1; /* Меняем порядок кнопки, чтобы лупа была слева */
+    margin-right: 5px; /* Отступ между лупой и полем ввода */
+}
+.searchButton:focus {
+    outline: none; /* Убираем рамку при фокусировке на кнопке */
+}
