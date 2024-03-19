@@ -1,0 +1,5 @@
+.img {
+    list-style: none;
+    object-fit: cover;
+    align-items: start;
+}

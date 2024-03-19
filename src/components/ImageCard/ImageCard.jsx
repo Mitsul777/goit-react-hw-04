@@ -1,11 +1,10 @@
-import styles from './ImageList.module.css';
-
-const ImageList = ({ image, onOpenModal }) => {
+import css from './ImageCard.module.css';
+const ImageCard = ({ image, onOpenModal }) => {
 
     return (
         <ul>
             <li>
-                <img
+                <img className={css.img}
                     src={image.urls.small}
                     alt={image.urls.description}
                     onClick={() => onOpenModal(image)}
@@ -16,4 +15,4 @@ const ImageList = ({ image, onOpenModal }) => {
     );
 };
 
-export default ImageList;
+export default ImageCard;

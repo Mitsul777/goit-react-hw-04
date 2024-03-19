@@ -43,7 +43,6 @@ function App() {
 
     const handleLoadMore = () => {
         setPage(page + 1);
-        setIsLoading(true);
     };
     const handleOpenModal = value => {
         setModalIsOpen(true);
@@ -60,8 +59,8 @@ function App() {
             <SearchBar onSearch={handleSubmit}/>
             {error && <b>Error!!!</b>}
             {images.length > 0 && <ImageGallery images={images} onOpenModal={handleOpenModal}/>}
-            {images.length > 0 && !isLoading && <LoadMoreBtn onClick={handleLoadMore}/>}
             {isLoading && <Loader />}
+            {images.length > 0 && <LoadMoreBtn onClick={handleLoadMore} />}
             {Object.keys(modalContent).length !== 0 && (
                 <ImageModal
                     isOpen={modalIsOpen}

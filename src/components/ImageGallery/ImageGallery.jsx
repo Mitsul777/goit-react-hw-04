@@ -1,4 +1,4 @@
-import ImageList from "../ImageList/ImageList.jsx";
+import ImageCard from '../ImageCard/ImageCard.jsx'
 import css from "./ImageGallery.module.css"; // Подключаем модуль CSS
 
 
@@ -10,7 +10,7 @@ const ImageGallery = ({ images, onOpenModal }) => {
             <ul className={css.list}>
                 {images.map((image) => (
                     <li className={css.item} key={image.id} >
-                        <ImageList image={image} onOpenModal={onOpenModal} />
+                        <ImageCard image={image} onOpenModal={onOpenModal} />
                     </li>
                 ))}
             </ul>
